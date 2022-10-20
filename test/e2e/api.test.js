@@ -10,16 +10,20 @@ import Server from '../../src/server.js'
 
 describe('API E2E Test Suite', () => {
     test.todo('GET / - should return an array')
+    test.todo('POST / - should save and item and return ok')
+    test.todo('DELETE / - should return an array')
+
     test('GET / - should return an array', async () => {
         const response = await supertest(Server)
         .get('/')
 
         const data = JSON.parse(response.text);
         expect(data).toBeInstanceOf(Array)
+        expect(data.length).toEqual(0)
 
         console.log('text',data)
     })
-    test.todo('POST / - should save and item and return ok')
+
     test('POST / - should save and item and return ok', async () => {
         const response = await supertest(Server)
         .post('/')
@@ -31,5 +35,12 @@ describe('API E2E Test Suite', () => {
         const expectResponse = { ok: 1 }
         expect(JSON.parse(response.text)).toStrictEqual(expectResponse)
     })
-    test.todo('DELETE / - should return an array')
+
+    test('DELETE / - should return an array', async () => {
+        const response = await supertest(Server)
+        .delete('/')
+
+        const expectResponse = { ok: 1 }
+        expect(JSON.parse(response.text)).toStrictEqual(expectResponse)
+    })
 })
