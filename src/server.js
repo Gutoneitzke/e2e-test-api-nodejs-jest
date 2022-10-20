@@ -1,9 +1,10 @@
 import { createServer } from 'http'
-import { once } from 'event'
+import { once } from 'events'
+import { randomUUID } from 'crypto'
 const Database = new Map()
 
 function respondJson(data, response){
-    return response(JSON.stringify(data))
+    return response.end(JSON.stringify(data))
 }
 
 async function handler(request, response) {
@@ -18,12 +19,16 @@ async function handler(request, response) {
     {
         const body = JSON.parse(await once(request, 'data'))
         console.log('recebido',body)
-        return respondJson({ ok: 1 });
+
+        const id = randomUUID()
+        Database.set(id,body)
+
+        return respondJson({ ok: 1 }, response);
     }
 
     if(method === 'DELETE')
     {
-        return respondJson({ ok: 1 });
+        return respondJson({ ok: 1 }, response);
     }
 }
 

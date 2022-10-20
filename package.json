@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/Gutoneitzke/e2e-test-api-nodejs-jest/issues"
   },
-  "homepage": "https://github.com/Gutoneitzke/e2e-test-api-nodejs-jest#readme"
+  "homepage": "https://github.com/Gutoneitzke/e2e-test-api-nodejs-jest#readme",
+  "dependencies": {
+    "event": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
