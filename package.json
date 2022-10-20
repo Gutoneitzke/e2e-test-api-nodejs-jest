@@ -1,0 +1,21 @@
+{
+  "name": "e2e-test-api-nodejs-jest",
+  "version": "1.0.0",
+  "description": "End-To-End Testing Web Apis with Node.js and Jest",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gutoneitzke/e2e-test-api-nodejs-jest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gutoneitzke/e2e-test-api-nodejs-jest/issues"
+  },
+  "homepage": "https://github.com/Gutoneitzke/e2e-test-api-nodejs-jest#readme"
+}
