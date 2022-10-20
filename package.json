@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_OPTIONS='--experimental-vm-modules --no-warnings'  jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,8 @@
     "event": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.2.2"
   }
 }
