@@ -28,8 +28,8 @@ describe('API E2E Test Suite', () => {
             age: 20
         })
 
-        const expectResponse = JSON.stringify({ "ok": 1 });
-        expect(response.text).toStrictEqual(expectResponse)
+        const expectResponse = { ok: 1 }
+        expect(JSON.parse(response.text)).toStrictEqual(expectResponse)
     })
     test.todo('DELETE / - should return an array')
 })
